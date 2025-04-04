@@ -42,8 +42,12 @@ int open_pkg(const char* path, struct package* pkg, const char* format) {
     if (format == NULL) {
         dbg(2, "Getting format from file extension");
         format = strrchr(path, '.') + 1;
-        dbg(1, "Format: %s\n", format);
+        // if no '.' keep the entire file name 
+       if (format == NULL) {
+            format = strrchr(path, '/') + 1;
+       }
     }
+    printf("format: %s\n", format);
 
     char** FORMATS;
     int FORMAT_COUNT = splita(getenv("SOVIET_FORMATS"), ' ', &FORMATS);

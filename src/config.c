@@ -31,7 +31,7 @@ ConfigEntry configEntries[] = {
     { "MAKE_FLAGS", "-j1" },
     { "SOVIET_DEFAULT_REPO", "OUR" },
     { "SOVIET_DEFAULT_REPO_URL", "https://github.com/Soviet-Linux/OUR.git" },
-    { "SOVIET_FORMATS", "ecmp" },
+    { "SOVIET_FORMATS", "ecmp" }, // Add any new formats (PKGBUILD eventually) here
     { "SOVIET_SOURCE_DIR", "/usr/src/cccp" },
     { "SOVIET_ENV_DIR", "/etc/cccp" },
     { "SOVIET_CLEANUP", "/usr/share/info/dir:/usr/share/doc/" },
